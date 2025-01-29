@@ -2,8 +2,8 @@ import 'package:chatting_app/src/commons/button.widget.dart';
 import 'package:chatting_app/src/commons/text_form_field.widget.dart';
 import 'package:chatting_app/src/config/theme/color.theme.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginPages extends StatelessWidget {
   const LoginPages({Key? key}) : super(key: key);
@@ -22,12 +22,13 @@ class LoginPages extends StatelessWidget {
                   // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.network(
-                        'https://cdni.iconscout.com/illustration/premium/thumb/login-illustration-download-in-svg-png-gif-file-formats--select-an-account-join-the-forum-password-digital-marketing-pack-business-illustrations-8333958.png'),
+                      'https://cdni.iconscout.com/illustration/premium/thumb/mobile-chatting-app-illustration-download-in-svg-png-gif-file-formats--smartphone-communication-messages-business-activities-pack-people-illustrations-4617901.png',
+                    ),
                     Text(
-                      'Login',
+                      'Welcome Back',
                       style: GoogleFonts.poppins(
                         color: AppColorTheme.blueColor900,
-                        fontSize: 25,
+                        fontSize: 30,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -36,26 +37,29 @@ class LoginPages extends StatelessWidget {
                     TextFormFieldWidgets(
                       labelText: 'Email',
                       backgroundColor: AppColorTheme.whiteColor100,
-                      prefixIcon: FontAwesomeIcons.user,
+                      prefixIcon: Iconsax.user,
                       borderColor: AppColorTheme.primary500,
                       // focusColor: Colors.blue.shade200,
                       enabledColor: Colors.grey.shade300,
-                      hintText: 'Email',
+                      hintText: 'Input your email',
                       borderRadius: 20,
                     ),
                     SizedBox(height: 15),
                     TextFormFieldWidgets(
                       labelText: 'Password',
                       backgroundColor: AppColorTheme.whiteColor100,
-                      prefixIcon: FontAwesomeIcons.user,
+                      prefixIcon: Iconsax.key,
                       isObsecure: true,
                       borderColor: AppColorTheme.redColor950,
                       enabledColor: Colors.grey.shade300,
-                      hintText: 'Password',
+                      hintText: 'Input your password',
                       borderRadius: 20,
                     ),
                     SizedBox(height: 10),
-                    Text('Lupa Password?'),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text('Forgot Password?'),
+                    ),
                     SizedBox(height: 15),
                     ButtonWidget(
                       title: 'Login',
@@ -64,13 +68,33 @@ class LoginPages extends StatelessWidget {
                       onPressed: () {},
                     ),
                     Row(children: [
-                      Text('Belum memiliki Akun?'),
+                      Text("Don't have an account?"),
                       TextButton(
                         onPressed: () {},
-                        child: Text('Daftar'),
+                        child: Text('Signup'),
                       )
                     ]),
-                    Center(child: Text('Atau Masuk dengan')),
+                    SizedBox(height: 15),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey[350],
+                            thickness: 1,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text('Or Sign in with', style: GoogleFonts.poppins(fontWeight: FontWeight.w400)),
+                        ),
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey[350],
+                            thickness: 1,
+                          ),
+                        ),
+                      ],
+                    ),
                     SizedBox(height: 15),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
