@@ -9,12 +9,10 @@ and a sleek UI for a seamless user experience. 🚀
 <p align="center">
  <div>
  <img src="assets/pages/login_page.png?raw=true" width="300">
-  <br>
     <strong>Login Page</strong>
  </div>
  <div>
  <img src="assets/pages/register_page.png?raw=true" width="300">
-    <br>
     <strong>Login Page</strong>
  </div>
 </p>
